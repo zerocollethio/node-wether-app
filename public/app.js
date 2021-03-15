@@ -1,6 +1,6 @@
 console.log('client side javascript');
 
-let url = 'http://localhost:3000/wether?location=';
+let url = '/wether?location=';
 
 
 const wetherform = document.querySelector('form');

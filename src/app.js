@@ -8,6 +8,7 @@ const hbspath = path.join(__dirname, '../template/views');
 const partialspath = path.join(hbspath, '../partials')
 const wether = require('./utils/wether.js')
 const geocode = require('./utils/geocode.js')
+const port = process.env.PORT || 3000
 hbs.registerPartials(partialspath);
 app.set('view engine', 'hbs')
 app.set('views', hbspath);
@@ -83,6 +84,6 @@ app.get('/*', (req, res) => {
         error: 'page not found'
     })
 })
-app.listen(3000, () => {
-    console.log("server started on port 3000")
+app.listen(port, () => {
+    console.log("server started on port " + port)
 })
